@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="agq-om-tfs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="vq0-L5-3Lq">
+            <objects>
+                <viewController storyboardIdentifier="SWRevealViewController" id="agq-om-tfs" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sJd-lx-X1z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="LKF-3A-WHu"/>
+                    </view>
+                    <connections>
+                        <segue destination="Xds-W8-aiu" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="cyA-Y0-yoM"/>
+                        <segue destination="tMo-lq-QUl" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="qoY-u6-5po"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgJ-ah-EbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="50"/>
+        </scene>
+        <!--SideMenu-->
+        <scene sceneID="2Q6-b6-PON">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SideMenu" id="Xds-W8-aiu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dny-z7-43g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="-146"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="2n5-nd-FL5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photos" id="tMo-lq-QUl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSO-0i-uxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="200"/>
+        </scene>
+    </scenes>
+</document>

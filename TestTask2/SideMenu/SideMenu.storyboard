@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UCh-uk-bHj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Side Menu View Controller-->
+        <scene sceneID="iqr-X2-e5E">
+            <objects>
+                <viewController id="UCh-uk-bHj" customClass="SideMenuViewController" customModule="TestTask2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ooh-Js-8qk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGv-LV-mmg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw2-z6-V53">
+                                        <rect key="frame" x="20" y="108" width="355" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xGS-zN-bHV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.76470588235294112" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Cw2-z6-V53" firstAttribute="leading" secondItem="cGv-LV-mmg" secondAttribute="leading" constant="20" id="Fdn-2i-myE"/>
+                                    <constraint firstAttribute="height" constant="168" id="XQb-iD-wRM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cw2-z6-V53" secondAttribute="trailing" id="YQF-et-TXp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cw2-z6-V53" secondAttribute="bottom" constant="20" id="zk0-Xd-g8j"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="672-7Y-iQP">
+                                <rect key="frame" x="0.0" y="168" width="375" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="photosId" id="8Z9-gb-KyJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Z9-gb-KyJ" id="WRz-9m-AZ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="byz-EY-Vv1" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Koh-Ux-7NH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mapId" id="J50-Rp-9ba">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J50-Rp-9ba" id="XFJ-lp-Nmx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="PP6-qD-YfQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="QH0-Rn-tZR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UCh-uk-bHj" id="TsM-lK-pLZ"/>
+                                    <outlet property="delegate" destination="UCh-uk-bHj" id="eXI-Wu-fW1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cGv-LV-mmg" firstAttribute="top" secondItem="Ooh-Js-8qk" secondAttribute="top" id="36y-52-OTv"/>
+                            <constraint firstItem="672-7Y-iQP" firstAttribute="leading" secondItem="VTT-S5-nBp" secondAttribute="leading" id="55F-91-agm"/>
+                            <constraint firstItem="672-7Y-iQP" firstAttribute="top" secondItem="cGv-LV-mmg" secondAttribute="bottom" id="CdJ-zP-tW8"/>
+                            <constraint firstItem="cGv-LV-mmg" firstAttribute="trailing" secondItem="VTT-S5-nBp" secondAttribute="trailing" id="Lai-3e-A9A"/>
+                            <constraint firstItem="cGv-LV-mmg" firstAttribute="leading" secondItem="VTT-S5-nBp" secondAttribute="leading" id="crg-Tp-0VS"/>
+                            <constraint firstItem="672-7Y-iQP" firstAttribute="trailing" secondItem="VTT-S5-nBp" secondAttribute="trailing" id="czP-Xh-Mhp"/>
+                            <constraint firstItem="672-7Y-iQP" firstAttribute="bottom" secondItem="VTT-S5-nBp" secondAttribute="bottom" id="m0H-h0-FX4"/>
+                            <constraint firstItem="672-7Y-iQP" firstAttribute="top" secondItem="cGv-LV-mmg" secondAttribute="bottom" id="uAZ-JT-Q8G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VTT-S5-nBp"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="672-7Y-iQP" id="uYX-Dv-ZTv"/>
+                        <outlet property="usernameLabel" destination="Cw2-z6-V53" id="XXS-2l-iue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Oh-X3-OSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-333.60000000000002" y="137.18140929535232"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="FA6-lJ-ryp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photos" id="byz-EY-Vv1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kte-iU-wCX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="-37"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="GWD-fa-TwI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" id="PP6-qD-YfQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBD-ab-TEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="315"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s5P-ux-dQZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Photo Controller-->
+        <scene sceneID="lzP-Zy-aOh">
+            <objects>
+                <viewController storyboardIdentifier="detailPhoto" id="s5P-ux-dQZ" customClass="DetailPhotoController" customModule="TestTask2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VJz-2Z-Khn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ufQ-yq-AIM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ufQ-yq-AIM" secondAttribute="height" multiplier="375:253" id="P2s-TP-M36"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cp-uv-u3i" userLabel="Date Label">
+                                <rect key="frame" x="0.0" y="253" width="375" height="20"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="X3d-y4-5z9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Az-KD-IqA" userLabel="Comments Table View">
+                                <rect key="frame" x="0.0" y="273" width="375" height="344"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentCellId" rowHeight="60" id="6NA-oR-wCP" customClass="DetailPhotoCell" customModule="TestTask2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6NA-oR-wCP" id="veu-3I-84N">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-2Y-Ia5" userLabel="Comment View">
+                                                    <rect key="frame" x="20" y="6" width="335" height="54"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2y-hc-QOu" userLabel="Text Label">
+                                                            <rect key="frame" x="6" y="6" width="323" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cl-4i-9xo" userLabel="Detail Label">
+                                                            <rect key="frame" x="0.0" y="34" width="329" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="vBI-hz-o7a"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.94117647058823528" green="0.96862745098039216" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="l2y-hc-QOu" secondAttribute="trailing" constant="6" id="4DZ-LF-GPf"/>
+                                                        <constraint firstItem="1Cl-4i-9xo" firstAttribute="leading" secondItem="LaG-2Y-Ia5" secondAttribute="leading" id="4xm-7N-Eas"/>
+                                                        <constraint firstItem="l2y-hc-QOu" firstAttribute="leading" secondItem="LaG-2Y-Ia5" secondAttribute="leading" constant="6" id="9a4-zV-ev2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1Cl-4i-9xo" secondAttribute="bottom" id="Znz-mA-PgR"/>
+                                                        <constraint firstItem="l2y-hc-QOu" firstAttribute="top" secondItem="LaG-2Y-Ia5" secondAttribute="top" constant="6" id="b53-kx-ZuM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1Cl-4i-9xo" secondAttribute="trailing" constant="6" id="iLc-gq-MFJ"/>
+                                                        <constraint firstItem="1Cl-4i-9xo" firstAttribute="top" secondItem="l2y-hc-QOu" secondAttribute="bottom" id="rnt-wL-evJ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LaG-2Y-Ia5" firstAttribute="leading" secondItem="veu-3I-84N" secondAttribute="leading" constant="20" id="97v-Ed-Xel"/>
+                                                <constraint firstAttribute="bottom" secondItem="LaG-2Y-Ia5" secondAttribute="bottom" id="Tc5-Sd-ulN"/>
+                                                <constraint firstItem="LaG-2Y-Ia5" firstAttribute="top" secondItem="veu-3I-84N" secondAttribute="top" constant="6" id="cFs-wi-dzl"/>
+                                                <constraint firstAttribute="trailing" secondItem="LaG-2Y-Ia5" secondAttribute="trailing" constant="20" id="etH-dT-WIU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentView" destination="LaG-2Y-Ia5" id="yzO-Ia-qMg"/>
+                                            <outlet property="detailCommentLabel" destination="1Cl-4i-9xo" id="Ba3-eo-1po"/>
+                                            <outlet property="textCommentLabel" destination="l2y-hc-QOu" id="8az-fv-7tO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="s5P-ux-dQZ" id="zQF-YF-HBv"/>
+                                    <outlet property="delegate" destination="s5P-ux-dQZ" id="eoh-DL-y4g"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0cp-uv-u3i" firstAttribute="top" secondItem="ufQ-yq-AIM" secondAttribute="bottom" id="24X-Fi-hgD"/>
+                            <constraint firstItem="0cp-uv-u3i" firstAttribute="leading" secondItem="14C-Ye-fh6" secondAttribute="leading" id="4AS-UI-7bh"/>
+                            <constraint firstItem="5Az-KD-IqA" firstAttribute="top" secondItem="0cp-uv-u3i" secondAttribute="bottom" id="JQo-qx-43v"/>
+                            <constraint firstItem="ufQ-yq-AIM" firstAttribute="leading" secondItem="14C-Ye-fh6" secondAttribute="leading" id="RQl-8L-fIR"/>
+                            <constraint firstItem="14C-Ye-fh6" firstAttribute="bottom" secondItem="5Az-KD-IqA" secondAttribute="bottom" constant="50" id="aAd-RA-TrL"/>
+                            <constraint firstItem="ufQ-yq-AIM" firstAttribute="trailing" secondItem="14C-Ye-fh6" secondAttribute="trailing" id="ceb-Pc-w2q"/>
+                            <constraint firstItem="ufQ-yq-AIM" firstAttribute="top" secondItem="VJz-2Z-Khn" secondAttribute="top" id="gG7-XS-9M9"/>
+                            <constraint firstItem="0cp-uv-u3i" firstAttribute="trailing" secondItem="14C-Ye-fh6" secondAttribute="trailing" id="hXX-Hj-nTD"/>
+                            <constraint firstItem="5Az-KD-IqA" firstAttribute="leading" secondItem="14C-Ye-fh6" secondAttribute="leading" id="o7u-pF-3Nx"/>
+                            <constraint firstItem="5Az-KD-IqA" firstAttribute="trailing" secondItem="14C-Ye-fh6" secondAttribute="trailing" id="oGK-0C-vlO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="14C-Ye-fh6"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentsTableView" destination="5Az-KD-IqA" id="s9p-zt-lqr"/>
+                        <outlet property="dateLabel" destination="0cp-uv-u3i" id="aXd-iJ-tPk"/>
+                        <outlet property="imageView" destination="ufQ-yq-AIM" id="jJJ-Xw-5h2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YG-N3-iSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-415" y="34"/>
+        </scene>
+    </scenes>
+</document>

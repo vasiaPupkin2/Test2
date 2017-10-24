@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7lm-hU-i7T">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Ul0-Lo-O63">
+            <objects>
+                <viewController id="TGg-Ji-qtO" customClass="MapViewController" customModule="TestTask2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gpf-ZO-1MH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hr-xB-mh2" userLabel="MapView" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeV-y0-n5e" userLabel="Add Button">
+                                <rect key="frame" x="291" y="519" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="2s2-Jy-LrQ"/>
+                                    <constraint firstAttribute="width" constant="72" id="wZ1-1m-GJs"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="plus2"/>
+                                <connections>
+                                    <action selector="addPhoto:" destination="TGg-Ji-qtO" eventType="touchUpInside" id="lL5-dN-htC"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ps-x9-slm" userLabel="BlackView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Ps-x9-slm" firstAttribute="bottom" secondItem="vL2-2p-N9K" secondAttribute="bottom" id="45j-Om-xUl"/>
+                            <constraint firstItem="7Hr-xB-mh2" firstAttribute="bottom" secondItem="vL2-2p-N9K" secondAttribute="bottom" id="5qc-xP-fgV"/>
+                            <constraint firstItem="vL2-2p-N9K" firstAttribute="trailing" secondItem="SeV-y0-n5e" secondAttribute="trailing" constant="12" id="GWS-Pv-BQ1"/>
+                            <constraint firstItem="7Hr-xB-mh2" firstAttribute="trailing" secondItem="vL2-2p-N9K" secondAttribute="trailing" id="Op6-21-LaT"/>
+                            <constraint firstItem="3Ps-x9-slm" firstAttribute="leading" secondItem="vL2-2p-N9K" secondAttribute="leading" id="WOb-KA-E6G"/>
+                            <constraint firstItem="3Ps-x9-slm" firstAttribute="top" secondItem="vL2-2p-N9K" secondAttribute="top" id="crp-GV-YPE"/>
+                            <constraint firstItem="3Ps-x9-slm" firstAttribute="trailing" secondItem="vL2-2p-N9K" secondAttribute="trailing" id="dVC-tI-sgl"/>
+                            <constraint firstItem="7Hr-xB-mh2" firstAttribute="top" secondItem="vL2-2p-N9K" secondAttribute="top" id="feh-SM-l8z"/>
+                            <constraint firstItem="vL2-2p-N9K" firstAttribute="bottom" secondItem="SeV-y0-n5e" secondAttribute="bottom" constant="12" id="mgY-bC-aBN"/>
+                            <constraint firstItem="7Hr-xB-mh2" firstAttribute="leading" secondItem="vL2-2p-N9K" secondAttribute="leading" id="tH2-DF-7bM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vL2-2p-N9K"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0FO-Au-jdQ">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="4MH-P3-98k">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="BlackView" destination="3Ps-x9-slm" id="Stt-81-5vq"/>
+                        <outlet property="MapView" destination="7Hr-xB-mh2" id="3pE-fr-i44"/>
+                        <outlet property="addButton" destination="SeV-y0-n5e" id="tzF-UF-DGp"/>
+                        <outlet property="sideMenuBarButton" destination="4MH-P3-98k" id="Qeq-bf-s6p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgG-GX-LhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="-639"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wjL-Gd-15e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7lm-hU-i7T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="DXm-6g-E6K">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TGg-Ji-qtO" kind="relationship" relationship="rootViewController" id="zjC-RV-jDi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35v-Fm-x9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1706" y="-684"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="22" height="17"/>
+        <image name="plus2" width="500" height="500"/>
+    </resources>
+</document>
